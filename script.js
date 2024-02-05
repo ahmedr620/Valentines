@@ -1,5 +1,6 @@
 var yesButton = document.getElementById("yesButton");
 var noButton = document.getElementById("noButton");
+var valentineVideo = document.getElementById("valentineVideo");
 var funnyMessages = [
     "bffr",
     "why",
@@ -24,9 +25,16 @@ function noPressed() {
 
 
 function yesPressed() {
+    // Hide all elements with class "content"
     var contentElements = document.querySelectorAll('.content');
     contentElements.forEach(function (element) {
         element.style.display = 'none';
     });
-dd
+
+    // Show the video if it exists
+    var valentineVideo = document.getElementById("valentineVideo");
+    if (valentineVideo) {
+        valentineVideo.style.display = 'block';
+        valentineVideo.play(); // Auto-play the video (optional)
+    }
 }
