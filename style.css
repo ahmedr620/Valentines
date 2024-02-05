@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    background-image:url('/hearts.gif'); background-repeat:repeat;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+
+}
+
+h1 {
+    color: #e60000;
+    font-size: 4em;
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+button {
+    padding: 1em 2em;
+    font-size: 2em;
+    background-color: #e60000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button.shrink {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.content {
+    text-align: center;
+
+}
