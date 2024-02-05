@@ -32,9 +32,10 @@ function yesPressed() {
     });
 
     // Show the video if it exists
-    var valentineVideo = document.getElementById("valentineVideo");
-    if (valentineVideo) {
-        valentineVideo.style.display = 'block';
-        valentineVideo.play(); // Auto-play the video (optional)
-    }
+    setTimeout(function () {
+        if (valentineVideo) {
+            valentineVideo.style.display = 'block';
+            valentineVideo.play(); // Auto-play the video (optional)
+        }
+    }, 2); // Adjust the duration (in milliseconds) as needed
 }

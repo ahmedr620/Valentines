@@ -60,3 +60,9 @@ button.shrink {
     color: white; /* White text color */
     font-family: 'Times New Roman'; /* Replace with your desired font for "No" button */
 }
+
+video {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the video horizontally */
+}
+
