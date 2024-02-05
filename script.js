@@ -1,6 +1,7 @@
 var yesButton = document.getElementById("yesButton");
 var noButton = document.getElementById("noButton");
 var valentineVideo = document.getElementById("valentineVideo");
+var content = document.querySelector('.content');
 var funnyMessages = [
     "bffr",
     "why",
@@ -23,19 +24,34 @@ function noPressed() {
     messageIndex = (messageIndex + 1) % funnyMessages.length;
 }
 
-
 function yesPressed() {
-    // Hide all elements with class "content"
-    var contentElements = document.querySelectorAll('.content');
-    contentElements.forEach(function (element) {
-        element.style.display = 'none';
-    });
+    if (content) {
+        content.style.display = 'none';
+    }
 
-    // Show the video if it exists
-    setTimeout(function () {
-        if (valentineVideo) {
-            valentineVideo.style.display = 'block';
-            valentineVideo.play(); // Auto-play the video (optional)
-        }
-    }, 2); // Adjust the duration (in milliseconds) as needed
+    if (valentineVideo) {
+        valentineVideo.style.display = 'block';
+        valentineVideo.play();
+
+        // Add an event listener for the end of the video
+        valentineVideo.addEventListener('ended', function () {
+            // Replay the video when it ends
+            valentineVideo.currentTime = 0;
+            valentineVideo.play();
+        });
+    }
 }
+
+// Add a click event listener on the document to exit the video
+document.addEventListener('click', function (event) {
+    if (event.target !== valentineVideo && event.target !== yesButton && event.target !== noButton) {
+        if (valentineVideo) {
+            valentineVideo.pause();
+            valentineVideo.style.display = 'none';
+        }
+
+        if (content) {
+            content.style.display = 'block';
+        }
+    }
+});
