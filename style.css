@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-    color: #e60000;
+    color: #e04ac0;
     font-size: 4em;
     font-family: 'Pixelify Sans', sans-serif;
     margin-left: 2vw;
@@ -21,7 +21,7 @@ h1 {
 }
 
 button {
-    padding: 1em 2em;
+    padding: 0.5em 1em;
     font-size: 2em;
     background-color: #e60000;
     color: white;
@@ -31,11 +31,31 @@ button {
 }
 
 button.shrink {
-    padding: 5px 10px;
-    font-size: 14px;
+    padding: 0.3em 0.7em;
+    font-size: 2em;
 }
 
 .content {
+    display: block;
     text-align: center;
 
+}
+#yesButton,
+#noButton {
+    display: block;
+    margin: 10px auto; /* Adjust the margin as needed for spacing */
+    padding: 10px 20px; /* Adjust the padding for button size */
+    cursor: pointer;
+}
+
+#yesButton {
+    background-color: #7a16b8; /* Green color for "Yes" button */
+    color: white; /* White text color */
+    font-family: 'Pixelify Sans', sans-serif; /* Replace with your desired font for "Yes" button */
+}
+
+#noButton {
+    background-color: #830303; /* Red color for "No" button */
+    color: white; /* White text color */
+    font-family: 'Times New Roman'; /* Replace with your desired font for "No" button */
 }

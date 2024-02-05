@@ -1,14 +1,16 @@
 var yesButton = document.getElementById("yesButton");
 var noButton = document.getElementById("noButton");
 var funnyMessages = [
-    "Are you sure about that?",
-    "Really, babe?",
-    "Think again, love!",
+    "bffr",
+    "why",
+    "ok fine",
+    "b like that",
+    "rlly"
     // ... (add more messages as needed)
 ];
 var messageIndex = 0;
 var shrinkFactor = 1;
-var maxShrinkFactor = 0.7; // Adjust this value to control the maximum shrink factor
+var maxShrinkFactor = 0.5; // Adjust this value to control the maximum shrink factor
 
 function noPressed() {
     if (shrinkFactor >= maxShrinkFactor) {
@@ -26,5 +28,5 @@ function yesPressed() {
     contentElements.forEach(function (element) {
         element.style.display = 'none';
     });
-
+dd
 }
