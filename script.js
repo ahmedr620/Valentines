@@ -7,12 +7,16 @@ var funnyMessages = [
     "why",
     "ok fine",
     "b like that",
-    "rlly"
+    "rlly",
+    "ok CLEARLY no is not an option nimra.",
+    "ok just press yes already",
+    "if u press yes i'll give u something",
+    "ok wtvr"
     // ... (add more messages as needed)
 ];
 var messageIndex = 0;
 var shrinkFactor = 1;
-var maxShrinkFactor = 0.5; // Adjust this value to control the maximum shrink factor
+var maxShrinkFactor = 0.4; // Adjust this value to control the maximum shrink factor
 
 function noPressed() {
     if (shrinkFactor >= maxShrinkFactor) {
