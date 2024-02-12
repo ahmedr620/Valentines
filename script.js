@@ -7,24 +7,21 @@ var funnyMessages = [
     "bffr",
     "why",
     "ok fine",
-    "b like that",
-    "rlly",
-    "ok CLEARLY no is not an option nimra.",
+    "CLEARLY no is not an option nimra.",
     "ok just press yes already",
-    "if u press yes i'll give u something",
-    "ok wtvr"
+    "fine wtvr"
     // ... (add more messages as needed)
 ];
 var messageIndex = 0;
 var shrinkFactor = 1;
-var maxShrinkFactor = 0.4; // Adjust this value to control the maximum shrink factor
+var maxShrinkFactor = 0.8; // Adjust this value to control the maximum shrink factor
 var noButtonClickCount = 0; // Counter to track the number of times "No" button is clicked
 
 function noPressed() {
     // Increment the button click count
     noButtonClickCount++;
 
-    if (noButtonClickCount <= 9) {
+    if (noButtonClickCount <= 6) {
         // Display the next funny message on the "No" button
         noButton.innerHTML = funnyMessages[messageIndex];
         
